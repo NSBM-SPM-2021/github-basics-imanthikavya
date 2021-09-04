@@ -1,7 +1,7 @@
 <div class="container">
   <h1 > Post Article</h1>
 
-  <form>
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
     <div>
       <label for="name">Name</label>
       <input id="name" type="text" formControlName="name">
@@ -34,7 +34,7 @@
     <label for="password">Password</label>
     <input id="password" type="password" formControlName="password">
 
-    <mat-progress-bar mode="indeterminate" ></mat-progress-bar>
+    <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
 
     <button class="button"><span> Post The Article</span> </button>
 
