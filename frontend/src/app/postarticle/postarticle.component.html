@@ -1,0 +1,44 @@
+<div class="container">
+  <h1 > Post Article</h1>
+
+  <form>
+    <div>
+      <label for="name">Name</label>
+      <input id="name" type="text" formControlName="name">
+
+      <label for="description">Description</label>
+      <textarea id="description" type="text" formControlName="description"></textarea>
+
+      <label for="imgurl">imgurl</label>
+      <input id="imgurl" type="text" formControlName="imgurl">
+
+      <label for="medType1">medType1</label>
+      <input id="medType1" type="text" formControlName="medType1">
+
+      <label for="medType2">medType2</label>
+      <input id="medType2" type="text" formControlName="medType2">
+
+      <label for="medType3">medType3</label>
+      <input id="medType3" type="text" formControlName="medType3">
+
+      <label for="medType4">medType4</label>
+      <input id="medType4" type="text" formControlName="medType4">
+    </div>
+
+    <label for="owner">Owner</label>
+    <input id="owner" type="text" formControlName="owner" required="true">
+
+    <label for="email">Email</label>
+    <input id="email" type="text" formControlName="email" required="true">
+
+    <label for="password">Password</label>
+    <input id="password" type="password" formControlName="password">
+
+    <mat-progress-bar mode="indeterminate" ></mat-progress-bar>
+
+    <button class="button"><span> Post The Article</span> </button>
+
+  </form>
+
+</div>
+
