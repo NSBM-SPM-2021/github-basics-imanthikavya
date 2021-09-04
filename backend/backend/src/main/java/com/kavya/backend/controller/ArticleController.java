@@ -29,4 +29,12 @@ public class ArticleController {
     }
 
 
+    @PostMapping("/")
+    public ResponseEntity<ArticleDto> postArticle(@RequestBody Article article){
+
+        ArticleDto a = articleService.saveArticle(article);
+        URI location = URI.create(String.format("/article/%s", a.getId().toString()));
+        return ResponseEntity.created(location).body(a);
+    }
+
 }
