@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
 import {Md5} from "ts-md5";
+import {HOST} from "../../common";
 
 @Component({
   selector: 'app-postarticle',
@@ -36,7 +37,7 @@ export class PostarticleComponent implements OnInit {
     this.profileForm.value.imgurl = "assets/skin4.jpg"
 
     console.log(this.profileForm.value)
-    this.http.post("http://localhost:9001/article/", this.profileForm.value)
+    this.http.post(HOST+"article/", this.profileForm.value)
       .toPromise()
       .then(response => {
         this.isLoading = false;

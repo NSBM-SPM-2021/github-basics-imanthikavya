@@ -1,0 +1,16 @@
+server:
+  port: 9001
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+#    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/skincarehub
+#    username: root
+#    password: admin
+    url: jdbc:mysql://${MYSQL_HOST:sql6.freemysqlhosting.net}:3306/sql6435238
+    username: sql6435238
+    password: EJwGKaEsh6
+    driver-class-name: com.mysql.cj.jdbc.Driver
