@@ -28,6 +28,23 @@ public class ArticleController {
         this.articleService = articleService;
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<ArticleDto> getArticle(@PathVariable("id") Long id) {
+
+        ArticleDto article = this.articleService.getArticle(id);
+
+        if(article == null){
+            return ResponseEntity.notFound().build();
+        }else{
+            return ResponseEntity.ok(article);
+        }
+
+    }
+
+    @GetMapping("/")
+    public ResponseEntity<List<ArticleDto>> getAllArticles(){
+        return ResponseEntity.ok(this.articleService.getAllArticles());
+    }
 
     @PostMapping("/")
     public ResponseEntity<ArticleDto> postArticle(@RequestBody Article article){
@@ -36,5 +53,6 @@ public class ArticleController {
         URI location = URI.create(String.format("/article/%s", a.getId().toString()));
         return ResponseEntity.created(location).body(a);
     }
+
 
 }
