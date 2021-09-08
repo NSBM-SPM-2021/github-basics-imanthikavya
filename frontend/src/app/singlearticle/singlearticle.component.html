@@ -1,0 +1,35 @@
+<div class="container">
+  <H1>
+    {{article.name}}
+  </H1>
+  <div style="width :45%;display: inline-block ">
+    <h4>
+      Description
+    </h4>
+    <p>
+      {{article.description}}
+    </p>
+    <div >
+      <h4>
+        Treatments
+      </h4>
+      <ul >
+        <li>{{article.medType1}}</li>
+        <li>{{article.medType2}}</li>
+        <li>{{article.medType3}}</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div style="width :45%;display: inline-block;vertical-align: top; ">
+    <img [src]="article.imgurl" alt="Image" style="width: 100%">
+  </div>
+  <div>
+    <button [routerLink]="['/articles/']" mat-raised-button>Back</button>
+
+  </div>
+
+</div>
+

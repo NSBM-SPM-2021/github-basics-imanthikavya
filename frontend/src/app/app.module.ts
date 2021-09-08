@@ -8,12 +8,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ReactiveFormsModule} from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { ArticlesComponent } from './articles/articles.component';
+import { SinglearticleComponent } from './singlearticle/singlearticle.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
     AppComponent,
     PostarticleComponent,
     AboutusComponent,
+    ArticlesComponent,
+    SinglearticleComponent,
 
   ],
   imports: [
@@ -22,7 +29,10 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     MatProgressBarModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
