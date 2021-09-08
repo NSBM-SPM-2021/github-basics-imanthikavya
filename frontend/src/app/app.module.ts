@@ -12,6 +12,7 @@ import { ArticlesComponent } from './articles/articles.component';
 import { SinglearticleComponent } from './singlearticle/singlearticle.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {MatIconModule} from "@angular/material/icon";
     ReactiveFormsModule,
     HttpClientModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
