@@ -53,6 +53,7 @@ https://app.zenhub.com/workspaces/github-basics-imanthikavya--development-612dd1
  
 ###ScreenShots
 
+![](frontend/ReadmeImages/test2.jpeg)
+
 ![](frontend/ReadmeImages/test1.jpeg)
 
-![](frontend/ReadmeImages/test2.jpeg)
