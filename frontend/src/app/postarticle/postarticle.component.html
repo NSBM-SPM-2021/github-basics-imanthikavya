@@ -4,39 +4,39 @@
   <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
     <div>
       <label for="name">Name</label>
-      <input id="name" type="text" formControlName="name">
+      <input id="name" type="text" formControlName="name" required="true">
 
       <label for="description">Description</label>
-      <textarea id="description" type="text" formControlName="description"></textarea>
+      <textarea id="description" type="text" formControlName="description" required="true"></textarea>
 
       <label for="imgurl">imgurl</label>
-      <input id="imgurl" type="text" formControlName="imgurl">
+      <input id="imgurl" type="text" formControlName="imgurl" required="true">
 
       <label for="medType1">medType1</label>
-      <input id="medType1" type="text" formControlName="medType1">
+      <input id="medType1" type="text" formControlName="medType1" required="true">
 
       <label for="medType2">medType2</label>
-      <input id="medType2" type="text" formControlName="medType2">
+      <input id="medType2" type="text" formControlName="medType2" required="true">
 
       <label for="medType3">medType3</label>
-      <input id="medType3" type="text" formControlName="medType3">
+      <input id="medType3" type="text" formControlName="medType3" required="true">
 
       <label for="medType4">medType4</label>
-      <input id="medType4" type="text" formControlName="medType4">
+      <input id="medType4" type="text" formControlName="medType4" required="true">
     </div>
 
     <label for="owner">Owner</label>
-    <input id="owner" type="text" formControlName="owner" required="true">
+    <input id="owner" type="text" formControlName="owner" required="true" required="true">
 
     <label for="email">Email</label>
-    <input id="email" type="text" formControlName="email" required="true">
+    <input id="email" type="text" formControlName="email" required="true" required="true" >
 
     <label for="password">Password</label>
-    <input id="password" type="password" formControlName="password">
+    <input id="password" type="password" formControlName="password" required="true">
 
     <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
 
-    <button class="button"><span> Post The Article</span> </button>
+    <button class="button" id="submit"><span> Post The Article</span> </button>
 
   </form>
 

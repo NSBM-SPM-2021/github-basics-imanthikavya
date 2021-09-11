@@ -32,6 +32,7 @@ public class ArticleDto {
         this.medType1 = article.getMedType1();
         this.medType2 = article.getMedType2();
         this.medType3 = article.getMedType3();
+        this.medType4 = article.getMedType4();
         this.owner = article.getOwner();
         this.email = article.getEmail();
 
