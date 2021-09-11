@@ -83,7 +83,6 @@ describe('PostarticleComponent', () => {
      postBtn.click();
 
     fixture.whenStable().then(() => {  // wait for async getQuote
-      console.log(component.isError)
       expect(component.isError).toBeFalsy();
     });
 
