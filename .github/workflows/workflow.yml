@@ -6,17 +6,6 @@ on:
       - development
 
 jobs:
-  frontend:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
-        with:
-          appdir: ./frontend
-          branch: development
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "skinncarehub" #Must be unique in Heroku
-          heroku_email: "rmikrathnayaka@students.nsbm.ac.lk"
   backend:
     needs: [frontend]
     runs-on: ubuntu-latest
@@ -29,3 +18,28 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "skincare-backend" #Must be unique in Heroku
           heroku_email: "rmikrathnayaka@students.nsbm.ac.lk"
+
+  frontend-test:
+    needs: backend
+    runs-on: [windows-latest]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Testing 
+      run: npm i && npm test --browsers=ChromeHeadless --watch=false
+      working-directory: ./frontend
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          appdir: ./frontend
+          branch: development
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "skinncarehub" #Must be unique in Heroku
+          heroku_email: "rmikrathnayaka@students.nsbm.ac.lk"
+
+
+
+
