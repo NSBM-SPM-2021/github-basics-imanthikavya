@@ -11,7 +11,7 @@ import {HOST} from "../../common";
 })
 export class PostarticleComponent implements OnInit {
   isLoading: boolean = false;
-
+  isError:boolean = false;
   profileForm = new FormGroup({
     name: new FormControl(''),
     description: new FormControl(''),
@@ -29,20 +29,26 @@ export class PostarticleComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onSubmit() {
+  onSubmit() : any {
 
+    if(!this.profileForm.valid){
+      this.isError = true;
+      return false;
+    }
     this.isLoading = true;
 
     this.profileForm.value.password = Md5.hashStr(this.profileForm.value.password);
     let number  = Math.round(Math.random() * 20);
     this.profileForm.value.imgurl = "assets/photos/"+number+".jpg"
 
-    console.log(this.profileForm.value)
     this.http.post(HOST+"article/", this.profileForm.value)
       .toPromise()
       .then(response => {
+
         this.isLoading = false;
       }).catch(e => {
+
+        this.isError = true;
         this.isLoading = false;
       }
     )

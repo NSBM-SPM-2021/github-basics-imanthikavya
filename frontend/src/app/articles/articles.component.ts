@@ -14,8 +14,6 @@ export class ArticlesComponent implements OnInit {
 
   ngOnInit(): void {
     this.http.get<Article[]>(HOST+"article/").toPromise().then(result => {
-
-      console.log(result)
       return this.articles = result
     });
   }
