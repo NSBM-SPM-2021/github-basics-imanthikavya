@@ -1,4 +1,5 @@
-#👋 SkinCareHub
+# 👋 SkinCareHub
+
 This is a simple website related to medical articles. Admin can post articles and view the articles.
 ### Deployed URL of my web application - https://skinncarehub.herokuapp.com/
 
