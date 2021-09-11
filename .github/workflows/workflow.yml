@@ -7,7 +7,6 @@ on:
 
 jobs:
   backend:
-    needs: [frontend]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -29,6 +28,7 @@ jobs:
       working-directory: ./frontend
 
   frontend:
+    needs: [frontend-test]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
