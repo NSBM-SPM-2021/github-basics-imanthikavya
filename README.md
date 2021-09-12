@@ -41,9 +41,9 @@ https://app.zenhub.com/workspaces/github-basics-imanthikavya--development-612dd1
 ### Screenshots
 ![](frontend/ReadmeImages/ZenHub2.jpg)
 
-![](frontend/ReadmeImages/ZenHub1.jpg)
+![](frontend/ReadmeImages/ZenHub1.jpeg)
 
-![](frontend/ReadmeImages/ZenHub3.jpg)
+![](frontend/ReadmeImages/ZenHub3.jpeg)
 
 ![](frontend/ReadmeImages/zenhub4.jpeg)
 
