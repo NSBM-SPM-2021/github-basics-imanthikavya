@@ -29,9 +29,9 @@ AboutUs page
 
 ## ZenHub
 
-###URL
+### URL
 https://app.zenhub.com/workspaces/github-basics-imanthikavya--development-612dd1039a6334001246f8a7/board
-###Screenshots
+### Screenshots
 ![](frontend/ReadmeImages/ZenHub1.jpg)
 
 ![](frontend/ReadmeImages/ZenHub2.jpg)
@@ -39,20 +39,20 @@ https://app.zenhub.com/workspaces/github-basics-imanthikavya--development-612dd1
 
 
 
-##Hosting - Heroku
+## Hosting - Heroku
 
 - I used Heroku to host my application.
 
-###Frontend workflow
+### Frontend workflow
 ![](frontend/ReadmeImages/heroku1.jpg)
 
-###Backend workflow
+### Backend workflow
 ![](frontend/ReadmeImages/heroku2.jpg)
 
 ## 📝 Unit Testing 
  -  I used Karma as Unit Testing Framework.
  
-###ScreenShots
+### ScreenShots
 
 ![](frontend/ReadmeImages/test2.jpeg)
 
