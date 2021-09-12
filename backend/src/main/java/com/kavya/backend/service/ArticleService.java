@@ -41,4 +41,25 @@ public class ArticleService {
 
         return articles;
     }
+
+    public ArticleDto deleteArticle(Long id,String password){
+
+        System.out.println(password);
+
+        Optional<Article> article = articleRepository.findById(id);
+
+        if(article.isPresent()) {
+            if(article.get().getPassword().equals(password.toString())){
+                System.out.println("Deleted");
+                this.articleRepository.deleteById(id);
+                return new ArticleDto()
+                        .setModel(article.get());
+            }
+        }
+
+        return new ArticleDto().setModel(null);
+
+
+    }
+
 }

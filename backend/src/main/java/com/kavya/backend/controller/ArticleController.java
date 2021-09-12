@@ -49,5 +49,18 @@ public class ArticleController {
         return ResponseEntity.created(location).body(a);
     }
 
+    @DeleteMapping("/{id}/{password}")
+    public ResponseEntity<ArticleDto> deleteArticle(@PathVariable("id") Long id,@PathVariable("password") String password){
+
+        ArticleDto a = articleService.deleteArticle(id,password);
+
+        if(a == null){
+            return ResponseEntity.status(403).body(a);
+        }
+        return ResponseEntity.status(202).body(a);
+
+
+    }
+
 
 }
