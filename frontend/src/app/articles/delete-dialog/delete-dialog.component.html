@@ -1,0 +1,14 @@
+<mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+<span *ngIf="error">Incorrect password!</span>
+<h2 mat-dialog-title>Are You Sure?</h2>
+
+<mat-dialog-content >
+
+  <input type="password" placeholder="Enter the Password" matInput [(ngModel)]="password">
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button class="mat-raised-button"(click)="close()">Cancel</button>
+  <button class="mat-raised-button mat-warn"(click)="save()">Delete</button>
+</mat-dialog-actions>

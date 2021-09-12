@@ -1,5 +1,5 @@
 server:
-  port: 9001
+  port: 8080
 
 spring:
   jpa:
@@ -10,7 +10,7 @@ spring:
 #    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/skincarehub
 #    username: root
 #    password: admin
-    url: jdbc:mysql://${MYSQL_HOST:sql6.freemysqlhosting.net}:3306/sql6435238
-    username: sql6435238
+    url: jdbc:mysql://${MYSQL_HOST:skincarehub.cvogg9fyxisq.us-east-1.rds.amazonaws.com}:3306/skincarehub
+    username: admin
     password: EJwGKaEsh6
     driver-class-name: com.mysql.cj.jdbc.Driver
