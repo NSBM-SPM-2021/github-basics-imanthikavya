@@ -16,6 +16,8 @@ public class Article {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
     private String name;
+
+    @Column(length=2500)
     private String description;
     private String imgurl;
     private String medType1;
