@@ -1,6 +1,7 @@
 # 👋 SkinCareHub
 
-This is a simple website related to medical articles. Admin can post articles and view the articles.
+This is a simple website that can post articles,  delete articles and view articles. There is no login feature but in every article posting, we collect their password. The user who has a relevant password for the related article can delete that article. As an example, In a real scenario, the post owner can share the password with one or more members to do changes. This facility enhances security.
+
 ### Deployed URL of my web application - https://skinncarehub.herokuapp.com/
 
 
@@ -9,6 +10,7 @@ This is a simple website related to medical articles. Admin can post articles an
 
 - Frontend Framework - Angular
 - Backend Framework - SpringBoot
+- Database - AWS
 - Hosting - Heroku
 - Unit Testing Framework - Jasmine |  Test runner - Karma
 - Project Management Tool - Zenhub
@@ -41,7 +43,7 @@ https://app.zenhub.com/workspaces/github-basics-imanthikavya--development-612dd1
 
 ![](frontend/ReadmeImages/ZenHub1.jpg)
 
-![](frontend/ReadmeImages/zenhub3.jpeg)
+![](frontend/ReadmeImages/ZenHub3.jpg)
 
 ![](frontend/ReadmeImages/zenhub4.jpeg)
 
